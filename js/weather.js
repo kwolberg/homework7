@@ -60,13 +60,13 @@ function gettingJSON(){
         //elements in HTML.  
         //I would print the JSON to the console
         // Your code here.
-        
+
         console.log(JSON.stringify(json));
         loc = json['name'];
         document.querySelector("#loc").innerHTML = loc;
 
         temp = json['main']['temp']; 
-        document.querySelector("#temp").innerHTML = temp; 
+        document.querySelector("#temp").innerHTML = temp + " with " + json['weather'][0]['description'];
 
         let imageLink = "http://openweathermap.org/img/wn/" + json['weather'][0]['icon'] + '.png'; 
         let altText = json['weather'][0]['description']; 
